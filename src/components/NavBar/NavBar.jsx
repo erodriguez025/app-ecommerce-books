@@ -13,7 +13,7 @@ export default function NavBar() {
 
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} style={{marginBottom: "7rem", boxShadow: "none"}}>
       <AppBar position="fixed" style={{backgroundColor: "#06113C"}}>
         <Toolbar>
           <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
