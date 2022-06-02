@@ -6,8 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ebook from './ebook.png'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import CartWidget from './CartWidget/CartWidget';
 
 
 export default function NavBar() {
@@ -33,7 +32,7 @@ export default function NavBar() {
           <Button variant="outlined">
             <strong>Sign In</strong>
           </Button>
-          <ShoppingCartIcon fontSize='large' color='primary' />
+          <CartWidget/>
         </Toolbar>
       </AppBar>
     </Box>
