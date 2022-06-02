@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ebook from './ebook.png'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 
@@ -14,7 +15,7 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" style={{backgroundColor: "#354259"}}>
+      <AppBar position="fixed" style={{backgroundColor: "#06113C"}}>
         <Toolbar>
           <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
             <img 
@@ -32,6 +33,7 @@ export default function NavBar() {
           <Button variant="outlined">
             <strong>Sign In</strong>
           </Button>
+          <ShoppingCartIcon fontSize='large' color='primary' />
         </Toolbar>
       </AppBar>
     </Box>
