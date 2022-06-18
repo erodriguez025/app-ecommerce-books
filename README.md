@@ -15,3 +15,5 @@ Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 #### Package.json
 Utilicé la librería"accounting": "^0.4.1" para dar formato pesos.
 También utilicé componentes de material-ui y bootstrap (estilos).
+
+##### Deploy
