@@ -11,7 +11,8 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import accounting from 'accounting';
-import { typography } from '@mui/system';
+import { Link } from "react-router-dom"
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -24,7 +25,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Item () {
+export default function Item ({title, img, price, id, author, description, category_name, rating}) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -39,29 +40,31 @@ export default function Item () {
            variant= "h5"
            color= "textSecondary"         
          >
-           {accounting.formatMoney(50)}
+           {accounting.formatMoney(price)}
          </Typography>
         }
-        title="Mero Cristianismo"
-        subheader="C.S. Lewis"
+        title={title}
+        subheader={author}
       />
       <CardMedia
         component="img"
         height="194"
-        image={"https://prodimage.images-bn.com/pimages/9780061140013_p0_v4_s1200x630.jpg"}
-        alt="Paella dish"
+        image={img}
+        alt="book"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Apologética cristiana.
+          Categoría: {category_name}
         </Typography>
+        
       </CardContent>
       <CardActions disableSpacing>
-
-      <IconButton aria-label="Add to Cart">
-          <AddShoppingCartIcon fontSize='large'/>
-        </IconButton>
-        {Array(4)
+        <Link to={`/item/${id}`} className="w-100 btn bg-principal text-white d-block">
+          <IconButton aria-label="Add to Cart">
+            <AddShoppingCartIcon fontSize='large'/>
+          </IconButton>
+        </Link>  
+        {Array(rating)
           .fill()
           .map((_, i) => (
             <p>&#11088;</p>
@@ -78,7 +81,7 @@ export default function Item () {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-            Buen libro.
+            {description}
           </Typography>
         </CardContent>
       </Collapse>
