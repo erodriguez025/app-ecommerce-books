@@ -17,3 +17,8 @@ Utilicé la librería"accounting": "^0.4.1" para dar formato pesos.
 También utilicé componentes de material-ui y bootstrap (estilos).
 
 ##### Deploy
+
+npm run build
+y luego hice el deploy con netlify:
+
+https://ecommerce-catholics-books.netlify.app/
